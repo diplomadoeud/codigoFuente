@@ -6,8 +6,26 @@ public class Programa {
 
 	public static void main(String[] args) {
 
-		String nombre = JOptionPane.showInputDialog("Ingrese su nombre: ");
+		// VERIFICAR EL NOMBRE
+		String nombre = "";
+		while (nombre.equalsIgnoreCase("")) {
+			nombre = JOptionPane.showInputDialog("ingrese nombre");
+			if (nombre == null) {
+				
+			}
+		}
 
+		// VERIFICAR EDAD
+		String aux = "";
+		while (aux.equalsIgnoreCase("")) {
+			aux = JOptionPane.showInputDialog("ingrese edad");
+			JOptionPane.showMessageDialog(null, "edad no valida", "Error!", JOptionPane.WARNING_MESSAGE);
+			if (nombre == null) {
+				JOptionPane.showMessageDialog(null, "edad no valida", "Error!", JOptionPane.WARNING_MESSAGE);
+				aux = "";
+			}
+			
+		}
 		int edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese su edad: "));
 		// int edad = Integer.parseInt(texto);
 
