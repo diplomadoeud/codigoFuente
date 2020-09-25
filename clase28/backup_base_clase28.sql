@@ -125,7 +125,7 @@ ALTER SEQUENCE public.paises_id_seq OWNED BY public.paises.id_pai;
 
 --
 -- TOC entry 208 (class 1259 OID 41707)
--- Name: paisesciudades; Type: VIEW; Schema: public; Owner: usrcommi
+-- Name: paisesciudades; Type: VIEW; Schema: public; Owner: usrprueba
 --
 
 CREATE VIEW public.paisesciudades AS
@@ -137,7 +137,7 @@ CREATE VIEW public.paisesciudades AS
      JOIN public.paises pa ON ((ci.id_pai = pa.id_pai)));
 
 
-ALTER TABLE public.paisesciudades OWNER TO usrcommi;
+ALTER TABLE public.paisesciudades OWNER TO usrprueba;
 
 --
 -- TOC entry 203 (class 1259 OID 41637)
