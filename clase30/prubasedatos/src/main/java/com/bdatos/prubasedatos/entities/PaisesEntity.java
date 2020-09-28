@@ -3,6 +3,8 @@ package com.bdatos.prubasedatos.entities;
 import java.io.Serializable;
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 /**
  * The persistent class for the paises database table.
@@ -17,8 +19,9 @@ public class PaisesEntity implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id_pai")
-	private Integer idPai;
 
+	private Integer idPai;
+	@JsonIgnore
 	private String abreviatura;
 
 	private String nombre;
