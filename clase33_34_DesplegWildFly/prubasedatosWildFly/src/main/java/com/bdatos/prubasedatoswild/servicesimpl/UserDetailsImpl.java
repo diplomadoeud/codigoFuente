@@ -1,16 +1,13 @@
-package com.bdatos.prubasedatos.servicesimpl;
+package com.bdatos.prubasedatoswild.servicesimpl;
 
 
-import com.bdatos.prubasedatos.entities.User;
+import com.bdatos.prubasedatoswild.entities.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
-import java.util.List;
 import java.util.Objects;
-import java.util.stream.Collectors;
 
 public class UserDetailsImpl implements UserDetails {
 	private static final long serialVersionUID = 1L;
@@ -35,12 +32,9 @@ public class UserDetailsImpl implements UserDetails {
 		this.authorities = authorities;
 	}
 
-	public static com.bdatos.prubasedatos.servicesimpl.UserDetailsImpl build(User user) {
-		/*List<GrantedAuthority> authorities = user.getRoles().stream()
-				.map(role -> new SimpleGrantedAuthority(role.getName().name()))
-				.collect(Collectors.toList());*/
+	public static com.bdatos.prubasedatoswild.servicesimpl.UserDetailsImpl build(User user) {
 
-		return new com.bdatos.prubasedatos.servicesimpl.UserDetailsImpl(
+		return new com.bdatos.prubasedatoswild.servicesimpl.UserDetailsImpl(
 				user.getId(), 
 				user.getUsername(), 
 				user.getEmail(),
@@ -102,7 +96,7 @@ public class UserDetailsImpl implements UserDetails {
 			return true;
 		if (o == null || getClass() != o.getClass())
 			return false;
-		com.bdatos.prubasedatos.servicesimpl.UserDetailsImpl user = (com.bdatos.prubasedatos.servicesimpl.UserDetailsImpl) o;
+		com.bdatos.prubasedatoswild.servicesimpl.UserDetailsImpl user = (com.bdatos.prubasedatoswild.servicesimpl.UserDetailsImpl) o;
 		return Objects.equals(id, user.id);
 	}
 }

@@ -1,8 +1,8 @@
-package com.bdatos.prubasedatos.servicesimpl;
+package com.bdatos.prubasedatoswild.servicesimpl;
 
-;
-import com.bdatos.prubasedatos.entities.User;
-import com.bdatos.prubasedatos.repositories.UserRepository;
+
+import com.bdatos.prubasedatoswild.entities.User;
+import com.bdatos.prubasedatoswild.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
