@@ -1,6 +1,6 @@
 package com.bdatos.prubasedatoswild.servicesimpl;
 
-;
+
 import com.bdatos.prubasedatoswild.entities.User;
 import com.bdatos.prubasedatoswild.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
