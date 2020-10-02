@@ -1,6 +1,6 @@
 package com.bdatos.prubasedatoswild.security.jwt;
 
-import com.bdatos.prubasedatoswild.servicesimpl.UserDetailsServiceImpl;
+import com.bdatos.prubasedatoswild.servicessegimpl.UserDetailsServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

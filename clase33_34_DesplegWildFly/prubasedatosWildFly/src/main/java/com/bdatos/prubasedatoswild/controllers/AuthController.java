@@ -4,7 +4,7 @@ import com.bdatos.prubasedatoswild.repositories.UserRepository;
 import com.bdatos.prubasedatoswild.requests.LoginRequest;
 import com.bdatos.prubasedatoswild.responses.JwtResponse;
 import com.bdatos.prubasedatoswild.security.jwt.JwtUtils;
-import com.bdatos.prubasedatoswild.servicesimpl.UserDetailsImpl;
+import com.bdatos.prubasedatoswild.servicessegimpl.UserDetailsImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;

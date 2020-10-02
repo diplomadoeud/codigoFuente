@@ -3,7 +3,7 @@ package com.bdatos.prubasedatoswild.security;
 
 import com.bdatos.prubasedatoswild.security.jwt.AuthEntryPointJwt;
 import com.bdatos.prubasedatoswild.security.jwt.AuthTokenFilter;
-import com.bdatos.prubasedatoswild.servicesimpl.UserDetailsServiceImpl;
+import com.bdatos.prubasedatoswild.servicessegimpl.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,4 +1,4 @@
-package com.bdatos.prubasedatoswild.servicesimpl;
+package com.bdatos.prubasedatoswild.servicessegimpl;
 
 
 import com.bdatos.prubasedatoswild.entities.User;
