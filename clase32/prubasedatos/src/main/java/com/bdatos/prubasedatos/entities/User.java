@@ -3,7 +3,7 @@ package com.bdatos.prubasedatos.entities;
 import javax.persistence.*;
 
 @Entity
-@Table(	name = "users", 
+@Table(	name = "users_rest",
 		uniqueConstraints = { 
 			@UniqueConstraint(columnNames = "username"),
 			@UniqueConstraint(columnNames = "email") 
