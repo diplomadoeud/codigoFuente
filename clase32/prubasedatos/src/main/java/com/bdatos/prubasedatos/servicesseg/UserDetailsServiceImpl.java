@@ -1,4 +1,4 @@
-package com.bdatos.prubasedatos.servicesimpl;
+package com.bdatos.prubasedatos.servicesseg;
 
 import com.bdatos.prubasedatos.entities.User;
 import com.bdatos.prubasedatos.repositories.UserRepository;

@@ -1,4 +1,4 @@
-package com.bdatos.prubasedatos.servicesimpl;
+package com.bdatos.prubasedatos.servicesseg;
 
 
 import com.bdatos.prubasedatos.entities.User;
@@ -32,9 +32,9 @@ public class UserDetailsImpl implements UserDetails {
 		this.authorities = authorities;
 	}
 
-	public static com.bdatos.prubasedatos.servicesimpl.UserDetailsImpl build(User user) {
+	public static UserDetailsImpl build(User user) {
 
-		return new com.bdatos.prubasedatos.servicesimpl.UserDetailsImpl(
+		return new UserDetailsImpl(
 				user.getId(), 
 				user.getUsername(), 
 				user.getEmail(),
@@ -96,7 +96,7 @@ public class UserDetailsImpl implements UserDetails {
 			return true;
 		if (o == null || getClass() != o.getClass())
 			return false;
-		com.bdatos.prubasedatos.servicesimpl.UserDetailsImpl user = (com.bdatos.prubasedatos.servicesimpl.UserDetailsImpl) o;
+		UserDetailsImpl user = (UserDetailsImpl) o;
 		return Objects.equals(id, user.id);
 	}
 }

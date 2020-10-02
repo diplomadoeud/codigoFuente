@@ -3,7 +3,7 @@ package com.bdatos.prubasedatos.security;
 
 import com.bdatos.prubasedatos.security.jwt.AuthEntryPointJwt;
 import com.bdatos.prubasedatos.security.jwt.AuthTokenFilter;
-import com.bdatos.prubasedatos.servicesimpl.UserDetailsServiceImpl;
+import com.bdatos.prubasedatos.servicesseg.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -53,13 +53,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.cors().and().csrf().disable()
-			.exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
-			.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
-			.authorizeRequests().antMatchers("/api/auth/**").permitAll()
-			.antMatchers(HttpMethod.OPTIONS, "/**").permitAll() //habilita llamado CORS Filter
-			.anyRequest().authenticated();
-
+		http.csrf().disable()
+				.exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
+				.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
+				.authorizeRequests().antMatchers("/api/auth/**").permitAll()
+				.antMatchers(HttpMethod.OPTIONS, "/**").permitAll() //habilita llamado CORS Filter
+				.antMatchers("/resources/**").permitAll()
+				.anyRequest().authenticated();
 		http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
 	}
 }

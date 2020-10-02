@@ -1,6 +1,6 @@
 package com.bdatos.prubasedatos.security.jwt;
 
-import com.bdatos.prubasedatos.servicesimpl.UserDetailsImpl;
+import com.bdatos.prubasedatos.servicesseg.UserDetailsImpl;
 import io.jsonwebtoken.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
